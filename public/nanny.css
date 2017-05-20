@@ -1,0 +1,373 @@
+
+html body{
+	overflow: hidden;
+	/*overflow-x: scroll;*/
+	width: 100%;
+}
+
+footer{
+  z-index: 3;
+  background-color: black;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 900px;
+  color: white;
+  left: 8px;
+  /*display: none;*/
+}
+
+#scene_container{
+	width: 100%;
+	height: 100%;
+  /*overflow-x: auto;*/
+	white-space: normal;
+
+}
+.scene{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	margin-left:-4px; /*delete vertical spaces between "screens"*/
+	vertical-align: middle;
+	overflow:hidden;
+	white-space: normal;
+}
+
+/*Home Page*/
+#startScroll{
+	position: absolute;
+	z-index: 6;
+}
+#darkness{
+	z-index: 5;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+	left: 0px;
+  -webkit-animation: flicker 5s;
+  animation: flicker 5s;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+
+}
+@keyframes flicker {
+	0% { opacity: 0;}
+	50% { opacity: 1;}
+	100% {opacity: 0;}
+
+}
+@-webkit-keyframes flicker{
+	0% { opacity: 0;}
+	50% { opacity: 1;}
+	100% {opacity: 0;}
+
+}
+#nannyBlock{
+	background: url("/images/nannyBlockY.png") center center no-repeat;
+	position: absolute;
+	height: 500px;
+	width: 400px;
+	z-index: 4;
+	left: 1400px;
+}
+
+.bg1::after{
+  height: 100%;
+  width: 100%;
+  background: url("/images/homePageNanny.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/*Scene 1 -Nanny Arrives*/
+
+  /*#butt{
+    position: absolute;
+    top: 400px;
+    left: 1000px;
+    z-index: 3;
+  }*/
+.bg2::after {
+  background: url("/images/nannyScene1.png") center center no-repeat;
+  height: 100%;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+#scene1Background{
+   position: absolute;
+	 width: 100%;
+	 height:100%;
+	 top: 0px;
+	 background-color: black;
+	 z-index: -4;
+}
+#lightning{
+	z-index: -2;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 800px;
+  top: 80px;
+	left: 0px;
+  -webkit-animation: flickerAnimation 10s infinite;
+  animation: flickerAnimation 10s infinite;
+}
+@keyframes flickerAnimation {
+	0% { opacity: 0;}
+	2% { opacity: .8;}
+	4% { opacity: 0;}
+	5% { opacity: 0;}
+	6% {opacity: 1;}
+	7% { opacity: 0;}
+	100% {opacity: 0;}
+
+}
+#nanny{
+	position: absolute;
+	height: 800px;
+	width: 800px;
+	left: -80px;
+	top: 130px;
+	animation: nanny_move 3s;
+	transition-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes nanny_move{
+	100%{
+		transform: translateX(150px);
+	}
+}
+	#nanny_sil{
+		position: relative;
+		height: 500px;
+		width: 500px;
+		top: 300px;
+		left: 250px;
+		background: url("/images/nanny_sil.png") center center no-repeat;
+	}
+	#nannyUmbrella{
+		position: relative;
+		z-index: 1;
+		height: 500px;
+		width: 500px;
+		top: -429px;
+		left: 122px;
+		background: url("/images/umbrella.png") center center no-repeat;
+	}
+	#tree{
+		position: absolute;
+		height: 500px;
+		width:600px;
+		top: 420px;
+		left: 1300px;
+		transform: translate(-1);
+		background: url("/images/tree.png") center center no-repeat;
+		animation: swaying 2s infinite;
+		transition-timing-function: ease-in-out;
+	}
+	@keyframes swaying{
+		0%{
+			transform: scale(0deg);
+		}
+		50%{
+			transform: scale(10deg);
+			transform: rotate(5deg);
+		}
+
+	100%{
+		transform: scale(0deg);
+		}
+	}
+	#scene1Type{
+		position: absolute;
+		height: 300px;
+		width: 400px;
+		font-size: 25px;
+		color: white;
+		display: none;
+	}
+	#showType{
+		position: absolute;
+		max-width: 300px;
+		top: 50px;
+		left: 300px;
+		font-size: 25px;
+		/*border-right: 4px solid orange;*/
+		color: white;
+		white-space: pre-line;
+		margin: 0 auto;
+		/*animation:
+	    blink-caret .75s step-end infinite;*/
+	}
+	/*@keyframes blink-caret {
+	  from, to { border-color: transparent }
+	  50% { border-color: orange; }
+	}*/
+  .bg3::after {
+    background: url("/images/page10A.jpg") center center no-repeat;
+    height: 900px;
+    width: 1900px;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .bg4::after {
+    background: url("/images/dh2.jpg") center center no-repeat;
+    height: 900px;
+    width: 1900px;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  .bg7::after {
+    background: url("/images/dh2.jpg") center center no-repeat;
+    height: 900px;
+    width: 1900px;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  /*Trial*/
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  /*Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  .wrapper {
+    height: 100vh;
+    /*overflow-y: hidden;*/
+    overflow-x: auto;
+    perspective: 2px;
+		width: 100%
+  }
+
+  .section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    height: 100vh;
+		width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+  }
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+  /* Force the background image to fill the whole element. */
+  .parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: 100%;
+    z-index: -1;
+    transform: translateZ(-1px) scale(1.5);
+  }
+
+  /* The styling for the static div. */
+  /*.static {
+    background-color: none;
+  }*/
+
+
+  /*Animation FadeIn on click*/
+
+#test {
+  /*position: relative;*/
+  height: 300px;
+  width: 200px;
+  background-color: yellow;
+  left: 0px;
+  top: 400px;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+  animation-play-state: paused;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/*type animation*/
+#typingOne {
+  width:400px;
+}
+#typingOne p {
+  position: relative;
+  top:-20px;
+  font-size: 20px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .12em solid orange; /* The typwriter cursor*/
+  white-space: nowrap;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  /*animation:
+    typing 5.5s steps(40, end),
+    blink-caret .75s step-end infinite;*/
+  /*animation-play-state: paused;*/
+  color: white;
+  z-index: 3;
+}
+/* The typing effect */
+/*@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+/* The typewriter cursor effect */
+/*@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}*/
+
+/*simulate lightning with animation flicker and adjusting the opacity to animation time*/
+
+  @keyframes flickerAnimation {
+    0% { opacity: 0;}
+    2% { opacity: .8;}
+    4% { opacity: 0;}
+    5% { opacity: 0;}
+    6% {opacity: 1;}
+    7% { opacity: 0;}
+    100% {opacity: 0;}
+
+}
+@-webkit-keyframes flickerAnimation{
+  0% { opacity: 0;}
+  2% { opacity: .8;}
+  4% { opacity: 0;}
+  5% { opacity: 0;}
+  6% {opacity: 1;}
+  7% { opacity: 0;}
+  100% {opacity: 0;}
+}
