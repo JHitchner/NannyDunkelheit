@@ -21,12 +21,13 @@ function pageOne(){
     i++;
   }, 100);
 }
-  //     window.onscroll=function(){
-  //      if(window.pageXOffset >900){
-  //    console.log("you have scrolled this far")
-  //   //
-  //   }
-  // }
+// Animation Triggers By Scrollbar Position
+  scene.onscroll=function(){
+    if (scene.scrollLeft < 1000 && scene.scrollLeft > 900 ){
+    var nannyAni = document.getElementById("nanny")
+    nannyAni.style.animationPlayState = "running";
+}
+  }
 
 pageOne();
 
@@ -42,9 +43,9 @@ proceedBtn.addEventListener("click", function(){
 });
 
 
-  window.addEventListener("scroll", function(){
-    console.log("poo");
-  })
+  // scene.addEventListener("scroll", function(){
+  //   console.log("poo");
+  // })
 
 
 
