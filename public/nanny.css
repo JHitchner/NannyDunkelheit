@@ -4,14 +4,13 @@ html body{
 	/*overflow-x: scroll;*/
 	width: 100%;
 }
-
 footer{
   z-index: 3;
   background-color: black;
   position: fixed;
   height: 90px;
   width: 100%;
-  top: 890px;
+  top: 893px;
   color: white;
   left: 8px;
   /*display: none;*/
@@ -23,7 +22,6 @@ footer{
 	perspective: 2px;
 	width: 100%
 }
-
 .section {
 	/* Needed for children to be absolutely positioned relative to the parent. */
 	position: relative;
@@ -52,14 +50,11 @@ footer{
 }
 
 #scene_container{
-	/*-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;*/
 	width: 100%;
 	height: 100%;
   overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: normal;
-
 }
 .scene{
 	display: inline-block;
@@ -70,7 +65,6 @@ footer{
 	overflow:hidden;
 	white-space: normal;
 }
-
 /*Home Page*/
 #startScroll{
 	position: absolute;
@@ -144,6 +138,7 @@ footer{
   width: 100%;
   -webkit-background-size: cover;
   background-size: cover;
+
 }
 #scene1Background{
    position: absolute;
@@ -165,6 +160,9 @@ footer{
   animation: flickerAnimation 10s infinite;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
+	-webkit-transform: translateZ(0);
+	backface-visibility: hidden;
+	transform: scale(1) translateZ(0);
 }
 @keyframes flickerAnimation {
 	0% { opacity: 0;}
@@ -187,6 +185,8 @@ footer{
 	animation-play-state: paused;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
+	backface-visibility: hidden;
+	transform: scale(1) translateZ(0);
 }
 @keyframes nanny_move{
 	0%{
@@ -222,20 +222,24 @@ footer{
 	transform: translate(-1);
 	background: url("/images/tree.png") center center no-repeat;
 	animation: swaying 2s infinite;
-	transition-timing-function: ease-in-out;
+	/*transition-timing-function: ease-in-out;*/
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
+	backface-visibility: hidden;
+	transform: scale(1) translateZ(0);
 }
 @keyframes swaying{
 	0%{
-		transform: scale(0deg);
+		transform: scale(1);
+		transform: rotate(0deg);
 	}
 	50%{
-		transform: scale(10deg);
-		transform: rotate(5deg);
+		transform: skewX(1.2deg);
+		transform: rotate(3deg);
 	}
 100%{
-	transform: scale(0deg);
+	transform: scale(1);
+	transform: rotate(0deg);
 	}
 }
 #scene1Type{
@@ -281,6 +285,11 @@ footer{
 	top: 100px;
 	left: 1000px;
 	background: url("/images/nanny_sil2.png") center center no-repeat;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+	backface-visibility: hidden;
+	transform: scale(1) translateZ(0);
+	z-index: -1;
 }
 #trialType3{
 	position: absolute;
@@ -294,6 +303,8 @@ footer{
 	margin: 0 auto;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
+	backface-visibility: hidden;
+	transform: scale(1) translateZ(0);
 
 }
 #feelersOne{
@@ -307,6 +318,8 @@ footer{
 	transition-timing-function: ease-in-out;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translateZ(0);
 }
 @keyframes flow1{
 	0%{
@@ -326,10 +339,12 @@ footer{
 	top: 370px;
 	left: 900px;
 	background: url("/images/feelers2.png") center center no-repeat;
-	animation: flow 3s infinite;
+	animation: flow 2s infinite;
 	transition-timing-function: ease-in-out;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translateZ(0);
 }
 @keyframes flow{
 	0%{
@@ -356,7 +371,7 @@ footer{
 #mom{
 	position: absolute;
 	height: 900px;
-	width:800px;
+	width:300px;
 	top: -60px;
 	left: -160px;
 	z-index: 2;
@@ -367,16 +382,20 @@ footer{
 	animation-play-state: paused;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translateZ(0);
+	backface-visibility: hidden;
+	transform: scale(1) translateZ(0);
 }
 @keyframes move_out{
 	0%{
 		transform: translateX(20px);
 	}
 	50%{
-		transform: translateX(150px) scale(1.2);
+		transform: translateX(400px) scale(1.2);
 	}
 100%{
-	transform: translateX(150px) scale(1.2);
+	transform: translateX(400px) scale(1.2);
 	}
 }
 #shadow{
@@ -394,6 +413,10 @@ footer{
 	background: url("/images/shadow.png") center center no-repeat;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translateZ(0);
+	backface-visibility: hidden;
+	transform: scale(1) translateZ(0);
 }
 @keyframes move_shadow{
 	0%{
