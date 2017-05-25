@@ -9,9 +9,9 @@ footer{
   z-index: 3;
   background-color: black;
   position: fixed;
-  height: 50px;
+  height: 90px;
   width: 100%;
-  top: 900px;
+  top: 890px;
   color: white;
   left: 8px;
   /*display: none;*/
@@ -47,14 +47,17 @@ footer{
 	bottom: 0;
 	left: 0;
 	background-size: 100%;
-	z-index: -1;
+	z-index: -2;
 	transform: translateZ(-1px) scale(1.5);
 }
 
 #scene_container{
+	/*-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;*/
 	width: 100%;
 	height: 100%;
-  overflow-x: auto;
+  overflow-x: scroll;
+	overflow-y: hidden;
 	white-space: normal;
 
 }
@@ -71,7 +74,17 @@ footer{
 /*Home Page*/
 #startScroll{
 	position: absolute;
+	background-color: #62080E;
+	border-radius: 15px;
 	z-index: 6;
+	top: 100px;
+	width: 150px;
+	height: 50px;
+	font-size: 40px;
+	color: white;
+	cursor:pointer;
+	font-family: 'Berkshire Swash', cursive;
+	/*font-family: unifrakturcook, blackletter;*/
 }
 #darkness{
 	z-index: 5;
@@ -85,29 +98,37 @@ footer{
   animation: flicker 5s;
 	animation-fill-mode: forwards;
 	animation-play-state: paused;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
 
 }
 @keyframes flicker {
 	0% { opacity: 0;}
 	50% { opacity: 1;}
 	100% {opacity: 0;}
-
 }
 @-webkit-keyframes flicker{
 	0% { opacity: 0;}
 	50% { opacity: 1;}
 	100% {opacity: 0;}
-
 }
+/*#scratches{
+	position:absolute;
+	background: url("/images/scratches.png") center center no-repeat;
+	height: 800px;
+	width: 1200px;
+	left: 500px;
+	top: 250px;
+	display: none;
+}*/
 #nannyBlock{
 	background: url("/images/nannyBlockY.png") center center no-repeat;
 	position: absolute;
 	height: 500px;
 	width: 400px;
-	z-index: 4;
-	left: 1400px;
+	z-index: 5;
+	left: 1300px;
 }
-
 .bg1::after{
   height: 100%;
   width: 100%;
@@ -117,12 +138,6 @@ footer{
 }
 /*Scene 1 -Nanny Arrives*/
 
-  /*#butt{
-    position: absolute;
-    top: 400px;
-    left: 1000px;
-    z-index: 3;
-  }*/
 .bg2::after {
   background: url("/images/nannyScene1.png") center center no-repeat;
   height: 100%;
@@ -136,18 +151,20 @@ footer{
 	 height:100%;
 	 top: 0px;
 	 background-color: black;
-	 z-index: -4;
+	 z-index: -5;
 }
-#lightning{
-	z-index: -2;
+.lightning{
+	z-index: -3;
   position: absolute;
   background-color: white;
   width: 100%;
   height: 800px;
-  top: 80px;
+  top: 0px;
 	left: 0px;
   -webkit-animation: flickerAnimation 10s infinite;
   animation: flickerAnimation 10s infinite;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
 }
 @keyframes flickerAnimation {
 	0% { opacity: 0;}
@@ -157,123 +174,332 @@ footer{
 	6% {opacity: 1;}
 	7% { opacity: 0;}
 	100% {opacity: 0;}
-
 }
 #nanny{
 	position: absolute;
 	height: 800px;
-	width: 800px;
-	left: -80px;
+	width: 600px;
+	left: -1250px;
 	top: 130px;
-	animation: nanny_move 3s;
+	animation: nanny_move 5s;
 	transition-timing-function: ease-in-out;
 	animation-fill-mode: forwards;
 	animation-play-state: paused;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
 }
 @keyframes nanny_move{
+	0%{
+		transform: translateX(0px);
+	}
 	100%{
-		transform: translateX(150px);
+		transform: translateX(600px);
 	}
 }
-	#nanny_sil{
-		position: relative;
-		height: 500px;
-		width: 500px;
-		top: 300px;
-		left: 250px;
-		background: url("/images/nanny_sil.png") center center no-repeat;
-	}
-	#nannyUmbrella{
-		position: relative;
-		z-index: 1;
-		height: 500px;
-		width: 500px;
-		top: -429px;
-		left: 122px;
-		background: url("/images/umbrella.png") center center no-repeat;
-	}
-	#tree{
-		position: absolute;
-		height: 500px;
-		width:600px;
-		top: 420px;
-		left: 1300px;
-		transform: translate(-1);
-		background: url("/images/tree.png") center center no-repeat;
-		animation: swaying 2s infinite;
-		transition-timing-function: ease-in-out;
-	}
-	@keyframes swaying{
-		0%{
-			transform: scale(0deg);
-		}
-		50%{
-			transform: scale(10deg);
-			transform: rotate(5deg);
-		}
-
-	100%{
+#nanny_sil{
+	position: relative;
+	height: 500px;
+	width: 500px;
+	top: 300px;
+	left: 750px;
+	background: url("/images/nanny_sil.png") center center no-repeat;
+}
+#nannyUmbrella{
+	position: relative;
+	z-index: 1;
+	height: 500px;
+	width: 500px;
+	top: -429px;
+	left: 622px;
+	background: url("/images/umbrella.png") center center no-repeat;
+}
+#tree{
+	position: absolute;
+	height: 500px;
+	width:600px;
+	top: 420px;
+	left: 1300px;
+	transform: translate(-1);
+	background: url("/images/tree.png") center center no-repeat;
+	animation: swaying 2s infinite;
+	transition-timing-function: ease-in-out;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+}
+@keyframes swaying{
+	0%{
 		transform: scale(0deg);
+	}
+	50%{
+		transform: scale(10deg);
+		transform: rotate(5deg);
+	}
+100%{
+	transform: scale(0deg);
+	}
+}
+#scene1Type{
+	position: absolute;
+	height: 300px;
+	width: 600px;
+	font-size: 25px;
+	color: white;
+	display: none;
+}
+#showType{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+	position: absolute;
+	max-width: 500px;
+	top: 50px;
+	left: 300px;
+	color: white;
+	white-space: normal;
+	margin: 0 auto;
+	/*font-family: fredericka-the-great, sans-serif;*/
+	font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+}
+.bg3::after {
+  background: url("/images/scene2.png") center center no-repeat;
+  height: 100%;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+#butt{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 3;
+	font-family: 'Berkshire Swash', cursive;
+}
+#nanny_sil2{
+	position: absolute;
+	height: 950px;
+	width:800px;
+	top: 100px;
+	left: 1000px;
+	background: url("/images/nanny_sil2.png") center center no-repeat;
+}
+#trialType3{
+	position: absolute;
+	left: 500px;
+	font-size: 25px;
+	height: 300px;
+	width: 400px;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	white-space: normal;
+	margin: 0 auto;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+
+}
+#feelersOne{
+	position: absolute;
+	height: 600px;
+	width: 1100px;
+	top: 320px;
+	left: 980px;
+	background: url("/images/feelers1.png") center center no-repeat;
+	animation: flow1 3s infinite;
+	transition-timing-function: ease-in-out;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+}
+@keyframes flow1{
+	0%{
+		transform: translateX(10px) translateY(20px) scale(1.1);
+	}
+	50%{
+		transform: translateX(0px) translateY(50px) scale(1.2);
+	}
+	100%{
+		transform: translateX(10px) translateY(20px) scale(1.1);
+	}
+}
+#feelersTwo{
+	position: absolute;
+	height: 600px;
+	width: 1100px;
+	top: 370px;
+	left: 900px;
+	background: url("/images/feelers2.png") center center no-repeat;
+	animation: flow 3s infinite;
+	transition-timing-function: ease-in-out;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+}
+@keyframes flow{
+	0%{
+		transform: translateY(20px) scale(1.1);
+	}
+	50%{
+		transform: translateY(50px) scale(1.2);
+	}
+	100%{
+		transform: translateY(20px) scale(1.1);
+	}
+}
+#door{
+	position: absolute;
+	height: 900px;
+	width:800px;
+	top: -60px;
+	left: -250px;
+	z-index:3;
+	transform: scale(1.2);
+	background: url("/images/frontDoor.png") center center no-repeat;
+	-webkit-backface-visibility: hidden;
+}
+#mom{
+	position: absolute;
+	height: 900px;
+	width:800px;
+	top: -60px;
+	left: -160px;
+	z-index: 2;
+	background: url("/images/mom.png") center center no-repeat;
+	animation: move_out 3s;
+	transition-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+}
+@keyframes move_out{
+	0%{
+		transform: translateX(20px);
+	}
+	50%{
+		transform: translateX(150px) scale(1.2);
+	}
+100%{
+	transform: translateX(150px) scale(1.2);
+	}
+}
+#shadow{
+	position: absolute;
+	height: 200px;
+	z-index: 2;
+	width:600px;
+	top: 600px;
+	left: -250px;
+	animation: move_shadow 3s;
+	transition-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+	display: none;
+	background: url("/images/shadow.png") center center no-repeat;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+}
+@keyframes move_shadow{
+	0%{
+		transform: translateX(20px);
+	}
+	50%{
+		transform: translateX(300px) scale(1.2);
+	}
+	100%{
+		transform: translateX(300px) scale(1.2);
+	}
+}
+
+.bg4::after {
+	top: -50px;
+  background: url("/images/scene3.png") center center no-repeat;
+  height: 100%;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+#children1{
+	position: absolute;
+	top: 400px;
+	left: 1200px;
+	width: 400px;
+  height: 500px;
+  background: url("images/children1.png") center center no-repeat;
+}
+#sprite{
+	position: absolute;
+	left: 400px;
+	z-index: 4;
+}
+#nanny_sil3{
+	position: absolute;
+	top: 150px;
+	left: 310px;
+	width: 700px;
+  height: 700px;
+	transform: scale(1.1);
+  background: url("images/nanny_sil3.png") center center no-repeat;
+	z-index: 2;
+}
+#nannyShadow_sprite{
+	position: absolute;
+
+	width: 962px;
+  height: 677px;
+  background: url("images/shadow_ss.png") left center no-repeat;
+	animation: play 1.5s steps(5);
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(.8);
+}
+@keyframes play {
+	 0% {
+		 background-position: 0px;
+	 }
+	 50%{
+		 background-position: -4806px;
+	 }
+	 70%{
+		 background-position: -4806px;
+	 }
+    100% {
+			background-position: 0px;
 		}
-	}
-	#scene1Type{
-		position: absolute;
-		height: 300px;
-		width: 400px;
-		font-size: 25px;
-		color: white;
-		display: none;
-	}
-	#showType{
-		position: absolute;
-		max-width: 300px;
-		top: 50px;
-		left: 300px;
-		font-size: 25px;
-		/*border-right: 4px solid orange;*/
-		color: white;
-		white-space: pre-line;
-		margin: 0 auto;
-		/*animation:
-	    blink-caret .75s step-end infinite;*/
-	}
-	/*@keyframes blink-caret {
-	  from, to { border-color: transparent }
-	  50% { border-color: orange; }
-	}*/
-  .bg3::after {
-    background: url("/images/page10A.jpg") center center no-repeat;
-    height: 900px;
-    width: 1900px;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
-  .bg4::after {
-    background: url("/images/dh2.jpg") center center no-repeat;
-    height: 900px;
-    width: 1900px;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
+}
 
-  .bg7::after {
-    background: url("/images/dh2.jpg") center center no-repeat;
-    height: 900px;
-    width: 1900px;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
-
-  /*Trial*/
-  /* The height needs to be set to a fixed value for the effect to work.
-   * 100vh is the full height of the viewport. */
-  /*Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-
-  /* The styling for the static div. */
-  /*.static {
-    background-color: none;
-  }*/
-
+.bg5::after {
+	/*top: -50px;*/
+  background: url("/images/scene4.png") center center no-repeat;
+  height: 100%;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+#nanny_piper{
+	position: absolute;
+	top: -100px;
+	background: url("/images/nanny_piper.png") center center no-repeat;
+	height: 1100px;
+	width: 900px;
+	left: 500px;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#trialType5{
+	position: absolute;
+	left: 100px;
+	width: 300px;
+	height: 400px;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	white-space: normal;
+	font-size: 25px;
+}
+.bg7::after {
+  background: url("/images/dh2.jpg") center center no-repeat;
+  height: 900px;
+  width: 1900px;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
 
   /*Animation FadeIn on click*/
 
@@ -339,36 +565,4 @@ footer{
   /*animation-play-state: paused;*/
   color: white;
   z-index: 3;
-}
-/* The typing effect */
-/*@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-/* The typewriter cursor effect */
-/*@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}*/
-
-/*simulate lightning with animation flicker and adjusting the opacity to animation time*/
-
-  @keyframes flickerAnimation {
-    0% { opacity: 0;}
-    2% { opacity: .8;}
-    4% { opacity: 0;}
-    5% { opacity: 0;}
-    6% {opacity: 1;}
-    7% { opacity: 0;}
-    100% {opacity: 0;}
-
-}
-@-webkit-keyframes flickerAnimation{
-  0% { opacity: 0;}
-  2% { opacity: .8;}
-  4% { opacity: 0;}
-  5% { opacity: 0;}
-  6% {opacity: 1;}
-  7% { opacity: 0;}
-  100% {opacity: 0;}
 }

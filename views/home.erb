@@ -1,8 +1,17 @@
 <main class="wrapper">
+<audio id="main" src="music/main.wav">
+
+</audio>
 <section id="scene_container">
   <div class="scene first_scene">
+    <audio id="musicBox"src="/music/opening.wav">
+    </audio>
+    <audio id="creak"src="/music/creaky.mp3">
+    </audio>
     <div id="page1">
         <section class="section parallax bg1">
+          <div id="scratches">
+          </div>
           <div id="nannyBlock">
           </div>
           <button type="button" id="startScroll">Proceed</button>
@@ -13,6 +22,10 @@
     </div>
   </div>
   <div class="scene second_scene">
+    <audio id="storm" src="/music/lightning.wav">
+    </audio>
+    <audio id="raven" src="music/raven.mp3">
+    </audio>
     <div id= "page2">
       <!-- <section class="section static">
       </section> -->
@@ -25,15 +38,10 @@
       </div>
       <span id="tree">
       </span>
-        <p id="scene1Type">This is going to have many lines. I hope this works out properly. Scary story coming your way soon.</p>
+        <p id="scene1Type"> Blah blah blah story goes here.Blah blah blah...something something blah.</p>
         <p id="showType">
-          <!--Type displays to this p-tag. See function pageOne-->
         </p>
-        <!-- <div id="test">
-        </div> -->
-
-        <!-- <button type="button" id="butt" name="button">Push Me Reveal</button> -->
-        <div id="lightning">
+        <div class="lightning">
           <!--An element that "flickers" through transparent pieces of art. See Lightning under Scene1 css  -->
         </div>
       </section>
@@ -42,23 +50,48 @@
 
   <div class="scene third_scene">
     <div id="page3">
-      <section class="section parallax bg7">
-        <h1>More Front</h1>
+      <section class="section parallax bg3">
+        <audio id="knock" src="music/knock.wav">
+
+        </audio>
+        <div id="nanny_sil2">
+        </div>
+        <div id="feelersOne">
+        </div>
+        <div id="feelersTwo">
+        </div>
+        <div id="door"></div>
+        <div id="mom"></div>
+        <div id="shadow"></div>
+        <button type="button" id="butt" name="button">KNOCK</button>
+
         <p id="trialType3">This is going to have many lines. I hope this works out properly. Scary story coming your way soon.</p>
+        <p id="showType3"></p>
       </section>
     </div>
   </div>
   <div class="scene fourth_scene">
-    <div id="green">
-      <section class="section parallax bg3">
+    <div id="page4">
+      <section class="section parallax bg4">
         <h1>To the Front</h1>
+        <div id="nanny_sil3"></div>
+        <div id="nannyShadow_sprite"></div>
+        <div id="children1"></div>
+        <button id="sprite" type="button" name="button">sprite</button>
+        <div class="lightning">
+          <!--An element that "flickers" through transparent pieces of art. See Lightning under Scene1 css  -->
+        </div>
       </section>
+
     </div>
   </div>
   <div class="scene fifth_scene">
     <div id="orange">
-      <section class="section parallax bg4">
-        <h1>More</h1>
+      <section class="section parallax bg5">
+        <div id="nanny_piper">
+        </div>
+        <p id="trialType5">This is going to have many lines. I hope this works out properly. Scary story coming your way soon.</p>
+        <p id="showType5"></p>
       </section>
     </div>
   </div>
@@ -71,7 +104,7 @@
   </div>
     <div class="scene seventh_scene">
       <div id="grey">
-        <section class="section parallax bg6">
+        <section class="section parallax bg7">
           <h1>More</h1>
         </section>
       </div>
@@ -80,6 +113,3 @@
 </main>
 <div id=scene1Background>
 </div>
-
-
-<!-- <script type="text/javascript" src="nanny.js"></script> -->
