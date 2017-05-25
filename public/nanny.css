@@ -384,8 +384,6 @@ footer{
 	-webkit-transform: scale(1);
 	-webkit-transform-style: preserve-3d;
 	-webkit-transform: translateZ(0);
-	backface-visibility: hidden;
-	transform: scale(1) translateZ(0);
 }
 @keyframes move_out{
 	0%{
@@ -415,8 +413,6 @@ footer{
 	-webkit-transform: scale(1);
 	-webkit-transform-style: preserve-3d;
 	-webkit-transform: translateZ(0);
-	backface-visibility: hidden;
-	transform: scale(1) translateZ(0);
 }
 @keyframes move_shadow{
 	0%{
