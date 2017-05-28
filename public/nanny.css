@@ -121,9 +121,9 @@ footer{
 	height: 500px;
 	width: 400px;
 	z-index: 5;
-	left: 1300px;
+	left: 1350px;
 }
-.bg1::after{
+#bg1::after{
   height: 100%;
   width: 100%;
   background: url("/images/homePageNanny.jpg") center center no-repeat;
@@ -437,10 +437,22 @@ footer{
 #children1{
 	position: absolute;
 	top: 400px;
-	left: 1200px;
+	left: 1600px;
 	width: 400px;
   height: 500px;
   background: url("images/children1.png") center center no-repeat;
+	animation: meeting 5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+}
+@keyframes meeting{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(-300px);
+	}
 }
 #sprite{
 	position: absolute;
@@ -459,7 +471,6 @@ footer{
 }
 #nannyShadow_sprite{
 	position: absolute;
-
 	width: 962px;
   height: 677px;
   background: url("images/shadow_ss.png") left center no-repeat;
@@ -494,11 +505,57 @@ footer{
 }
 #nanny_piper{
 	position: absolute;
-	top: -100px;
+	top: 800px;
 	background: url("/images/nanny_piper.png") center center no-repeat;
-	height: 1100px;
+	height: 1200px;
 	width: 900px;
+	left: -500px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	animation: pied_piper 10s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+	animation-play-state: paused;
+}
+@keyframes pied_piper{
+	0%{
+		transform: translateY(-100px) translateX(350px);
+	}
+	30%{
+		transform: translateY(-400px) translateX(550px);
+	}
+	50%{
+		transform: translateY(-700px) translateX(750px);
+	}
+	80%{
+		transform: translateY(-900px) translateX(950px);
+	}
+	100%{
+		transform: translateY(-1100px) translateX(1150px);
+	}
+}
+#feelers3{
+	position: absolute;
+	top: 0px;
+	background: url("/images/feelers3.png") center center no-repeat;
+	height: 1300px;
+	width: 1800px;
 	left: 500px;
+	z-index: 1;
+	transform: scale(.5);
+	-webkit-background-size: cover;
+	background-size: cover;
+	animation: feelerflow3 3s infinite;
+
+}
+#feelers4{
+	position: absolute;
+	top: -10px;
+	background: url("/images/feelers4.png") center center no-repeat;
+	height: 1300px;
+	width: 1900px;
+	left: 490px;
+	transform: scale(.5);
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -512,59 +569,179 @@ footer{
 	white-space: normal;
 	font-size: 25px;
 }
-.bg7::after {
-  background: url("/images/dh2.jpg") center center no-repeat;
-  height: 900px;
-  width: 1900px;
+#bg6::after {
+	top: -50px;
+  background: url("/images/scene5.png") center center no-repeat;
+  height: 100%;
+  width: 100%;
   -webkit-background-size: cover;
   background-size: cover;
 }
+#nannyPiper2{
+	position: absolute;
+	background: url("/images/nanny_piper2.png") center center no-repeat;
+	height: 1600px;
+	width: 3500px;
+	top: -300px;
+	left: -2500px;
+	transform: scale(.5);
+	-webkit-background-size: cover;
+	background-size: cover;
+	animation: nannyLead 25s;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+}
+@keyframes nannyLead{
+	0%{
+		transform: translateX(0px) scale(.5);
+	}
+	100%{
+		transform: translateX(3300px) scale(.5);
+	}
+}
+#clouds1{
+	position: absolute;
+	background: url("/images/clouds1.png") center center no-repeat;
+	height: 1600px;
+	width: 4000px;
+	top: -750px;
+	left: 100px;
+	z-index: -2;
+	-webkit-background-size: cover;
+	background-size: cover;
+	animation: cloud_scroll 56s infinite;
+	animation-timing-function: ease-in-out;
+	opacity: .8
+}
+@keyframes cloud_scroll{
+	0%{
+		transform: translateX(0) scale(.3);
+		opacity: .8;
+	}
+	90%{
+		opacity: .8;
+	}
+	100%{
+		transform: translateX(-2500px) scale(.3);
+		opacity: 0;
+	}
+}
+#clouds2{
+	position: absolute;
+	background: url("/images/clouds2.png") center center no-repeat;
+	height: 1600px;
+	width: 6500px;
+	top: -650px;
+	left: -800px;
+	z-index: -2;
+	-webkit-background-size: cover;
+	background-size: cover;
+	animation: cloud_scroll2 60s infinite;
+	animation-timing-function: ease-in-out;
+}
+@keyframes cloud_scroll2{
+	0%{
+		transform: translateX(0) scale(.2);
+	}
+	90%{
+		opacity: 1;
+	}
+	100%{
+		transform: translateX(-3000px) scale(.2);
+		opacity: 0;
+	}
+}
+#moon{
+	position: absolute;
+	background: url("/images/moon.png") center center no-repeat;
+	height: 200px;
+	width: 200px;
+	top: 30px;
+	left: 300px;
+	transform: scale(.6);
+	z-index: -3;
 
-  /*Animation FadeIn on click*/
-
-#test {
-  /*position: relative;*/
-  height: 300px;
-  width: 200px;
-  background-color: yellow;
-  left: 0px;
-  top: 400px;
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
-  animation-play-state: paused;
+}
+#bg7::after {
+  background: url("/images/scene6.png") center center no-repeat;
+  height: 1900px;
+  width: 100%;
+	top: -800px;
+  -webkit-background-size: cover;
+  background-size: cover;
+	animation: grow 15s;
+	animation-fill-mode:forwards;
+	animation-play-state:paused;
+}
+@keyframes grow{
+	0%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: translateY(600px);
+	}
+}
+#lightsOut{
+	position: absolute;
+	height: 1900px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .6);
+	display: none;
+}
+#border{
+	background: url("/images/scene6_border.png") center center no-repeat;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	z-index: 2;
+}
+#light{
+	background: url("/images/light.png") center center no-repeat;
+	height: 350px;
+	width: 350px;
+	position: absolute;
+	left: 650px;
+	top: 220px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	z-index: 5;
+	border: none;
+	outline: none;
+	display: block;
+}
+#transform{
+	position: absolute;
+	left: 650px;
+	width: 687px;
+  height: 1201px;
+	top: -100px;
+  background: url("images/transform.png") left center no-repeat;
+	animation: woo 3.5s steps(6);
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(.8);
+	z-index: 4;
+}
+@keyframes woo {
+	 0% {
+		 background-position: 0px;
+	 }
+	 /*50%{
+		 background-position: -4202px;
+	 }*/
+	 /*70%{
+		 background-position: -4202px;
+	 }*/
+    100% {
+			background-position: -4202px;
+		}
 }
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 /*type animation*/
 #typingOne {
   width:400px;

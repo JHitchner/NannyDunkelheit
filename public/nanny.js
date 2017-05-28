@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var musicBox =document.getElementById("musicBox");
   var storm =document.getElementById("storm");
   var nannyAni = document.getElementById("nanny");
+  var children =document.getElementById("children1");
   var creak =document.getElementById("creak");
   var knock =document.getElementById("knock");
   var raven =document.getElementById("raven");
@@ -21,8 +22,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var mom = document.getElementById("mom");
   var shadow =document.getElementById("shadow");
   var main =document.getElementById("main");
-
-
+  var whisperOpen=document.getElementById("whisper_open");
+var openBG=document.getElementById("bg1");
+var deadHead =document.getElementById("bg6");
+var nannyPiper =document.getElementById("nanny_piper");
+var stairs =document.getElementById("stairs");
+var nannyPiper2 =document.getElementById("nannyPiper2");
+var hall =document.getElementById("downHall");
+var lightBtn =document.getElementById("light");
+var lightsOut =document.getElementById("lightsOut");
+var transform =document.getElementById("transform");
+var bgMove =document.getElementById("bg7");
+var transFormWav =document.getElementById("transformWav");
 // Function that prints the text of the story one character at a time.
   function pageOne(){
      var i = 0;
@@ -33,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
        }
       i++;
     }, 100);
-    raven.play();
   }
 // Animation Triggers By Scrollbar Position
   musicBox.play();
@@ -48,14 +58,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
       main.play();
       console.log("bam");
     }
-    if (scene.scrollLeft < 5580 && scene.scrollLeft > 5480){
-      // main.play();
-      // scene.style.overflowY = "scroll";
-      // scene.style.overflowX ="hidden";
-      // scene.style.whiteSpace = "normal";
+    if (scene.scrollLeft < 4000 && scene.scrollLeft > 3900){
+      main.play();
+      console.log("bam");
+    }
+    if (scene.scrollLeft < 6980 && scene.scrollLeft > 6880){
+      nannyPiper.style.animationPlayState = "running";
+      stairs.play();
+    }
+    if (scene.scrollLeft < 7800 && scene.scrollLeft > 7700){
+      nannyPiper2.style.animationPlayState = "running";
+      main.pause();
+      downHall.play();
+      creak.play();
+      window.setTimeout(function() {
+        stairs.play();
+      }, 3000);
     }
   }
-
   spriteBtn.addEventListener("click", function(){
     nannyShadowSprite.style.animationPlayState = "running";
   })
@@ -67,10 +87,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     darknessAni.style.animationPlayState = "running";
     window.setTimeout(function() {
       blockY.style.display = "none";
-      scratches.style.display = "block";
+      openBG.style.background = "url('images/homePageNanny2.jpg') center center no-repeat";
     }, 2000);
     scene.style.whiteSpace = "nowrap"
     creak.play();
+    whisperOpen.play();
     console.log("clicked");
   });
 
@@ -79,12 +100,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
     window.setTimeout(function() {
       mom.style.animationPlayState = "running"
       shadow.style.animationPlayState = "running"
-      shadow.style.display ="block"
+      shadow.style.display ="block";
     }, 2000);
-    console.log("I was clicked")
-  })
+    console.log("I was clicked");
+  });
+
+lightBtn.addEventListener("click", function(){
+  console.log("I was so clicked");
+  lightBtn.style.display = "none";
+  lightsOut.style.display = "block";
+  transform.style.animationPlayState ="running";
+  bgMove.style.animationPlayState ="running";
+  transFormWav.play();
+});
+
 
 });
+
+
 // Page 4,5, 6, 7, 8
 // Page 6,7,8 - 6 and 5 with animations
 // Page 9,10,11 - 7 and 8 with Animations
