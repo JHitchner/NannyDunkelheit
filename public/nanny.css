@@ -327,14 +327,6 @@ footer{
 	z-index: -1;
 }
 #scene2Type{
-	position: absolute;
-	height: 300px;
-	width: 600px;
-	font-size: 25px;
-	color: white;
-	display: none;
-}
-#showType2{
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
 	position: absolute;
@@ -347,7 +339,33 @@ footer{
 	font-family: 'Arima Madurai', cursive;
 	font-size: 25px;
 	z-index: 2;
+	animation: fade2 6s;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+	/*display: none;*/
 }
+@keyframes fade2{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+/*#showType2{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+	position: absolute;
+	max-width: 450px;
+	top: 350px;
+	left: 400px;
+	color: white;
+	white-space: normal;
+	margin: 0 auto;
+	font-family: 'Arima Madurai', cursive;
+	font-size: 25px;
+	z-index: 2;
+}*/
 #feelersOne{
 	position: absolute;
 	height: 600px;
@@ -408,6 +426,9 @@ footer{
 	outline: none;
 	cursor: pointer;
 	z-index:3;
+	font-family: 'Arima Madurai', cursive;
+	font-size: 25px;
+	color: white;
 	transform: scale(1.2);
 	background: url("/images/frontDoor.png") center center no-repeat;
 	-webkit-backface-visibility: hidden;
@@ -483,14 +504,36 @@ footer{
   background-size: cover;
 }
 #scene3Type{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
 	position: absolute;
-	/*height: 00px;*/
-	width: 600px;
-	font-size: 25px;
+	max-width: 450px;
+	height: 600px;
+	top: 500px;
+	left: 850px;
 	color: white;
-	display: none;
+	white-space: normal;
+	margin: 0 auto;
+	font-family: 'Arima Madurai', cursive;
+	text-shadow: 2px 2px black;
+	font-size: 25px;
+	z-index: 4;
+	animation: fade3 6s;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+	/*display: none;*/
 }
-#showType3{
+@keyframes fade3{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+	/*display: none;*/
+
+/*#showType3{
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
 	position: absolute;
@@ -505,7 +548,7 @@ footer{
 	text-shadow: 2px 2px black;
 	font-size: 25px;
 	z-index: 2;
-}
+}*/
 #children1{
 	position: absolute;
 	top: 400px;
@@ -564,14 +607,6 @@ footer{
   background-size: cover;
 }
 #scene4Type{
-	position: absolute;
-	height: 300px;
-	width: 600px;
-	font-size: 25px;
-	color: white;
-	display: none;
-}
-#showType4{
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
 	position: absolute;
@@ -584,7 +619,33 @@ footer{
 	font-family: 'Arima Madurai', cursive;
 	font-size: 25px;
 	z-index: 5;
+	animation: fade4 6s;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+	/*display: none;*/
 }
+@keyframes fade4{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+/*#showType4{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+	position: absolute;
+	max-width: 400px;
+	top: 450px;
+	left: 1300px;
+	color: white;
+	white-space: normal;
+	margin: 0 auto;
+	font-family: 'Arima Madurai', cursive;
+	font-size: 25px;
+	z-index: 5;
+}*/
 #nanny_piper{
 	position: absolute;
 	top: 800px;
@@ -655,27 +716,46 @@ footer{
   background-size: cover;
 }
 #scene5Type{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
 	position: absolute;
-	height: 300px;
-	width: 600px;
-	font-size: 25px;
+	max-width: 500px;
+	top: 30px;
+	left: 650px;
 	color: white;
-	display: none;
+	white-space: normal;
+	margin: 0 auto;
+	font-family: 'Arima Madurai', cursive;
+	text-shadow: 2px 2px black;
+	font-size: 25px;
+	z-index: 7;
+	animation: fade5 6s;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+	/*display: none;*/
 }
-#showType5{
+@keyframes fade5{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+/*#showType5{
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
 	position: absolute;
 	max-width: 450px;
-	top: 750px;
+	top: 650px;
 	left: 700px;
 	color: white;
 	white-space: normal;
 	margin: 0 auto;
 	font-family: 'Arima Madurai', cursive;
 	font-size: 25px;
-	z-index: 5;
-}
+	z-index: 7;
+}*/
 #bust{
 	position: absolute;
 	background: url("/images/head.png") center center no-repeat;

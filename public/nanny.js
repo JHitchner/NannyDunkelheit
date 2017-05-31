@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  var test = document.getElementById("test");
-  var scene = document.getElementById("scene_container");
-  var buttonStart = document.getElementById("door");
-  var scene1Type = document.getElementById("scene1Type").textContent;
-  var scene1Array = scene1Type.split("");
-  var show = document.getElementById("showType");
-  var blockY = document.getElementById("nannyBlock");
-  // var proceedBtn = document.getElementById("startScroll");
+  var scene =document.getElementById("scene_container");
+  var buttonStart =document.getElementById("door");
+  var doorHud =document.getElementById("clickDoor");
+  var scene1Type =document.getElementById("scene1Type").textContent;
+  var scene1Array =scene1Type.split("");
+  var show =document.getElementById("showType");
+  var blockY =document.getElementById("nannyBlock");
   var darknessAni =document.getElementById("darkness");
   var body =document.getElementsByTagName("body");
   var musicBox =document.getElementById("musicBox");
@@ -24,22 +23,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var shadow =document.getElementById("shadow");
   var main =document.getElementById("main");
   var whisperOpen=document.getElementById("whisper_open");
-var openBG=document.getElementById("bg1");
-var deadHead =document.getElementById("deadbust");
-var head =document.getElementById("bust");
-var nannyPiper =document.getElementById("nanny_piper");
-var stairs =document.getElementById("stairs");
-var nannyPiper2 =document.getElementById("nannyPiper2");
-var hall =document.getElementById("downHall");
-var lightBtn =document.getElementById("light");
-var lightsOut =document.getElementById("lightsOut");
-var transform =document.getElementById("transform");
-var bgMove =document.getElementById("bg7");
-var transFormWav =document.getElementById("transformWav");
-var bedtime =document.getElementById("bedtimeWav");
-var shadowAni =document.getElementById("feelers4");
-var nomNomAni =document.getElementById("nomNom");
-var nannArms =document.getElementById("nannyArms");
+  var openBG=document.getElementById("bg1");
+  var deadHead =document.getElementById("deadbust");
+  var head =document.getElementById("bust");
+  var nannyPiper =document.getElementById("nanny_piper");
+  var stairs =document.getElementById("stairs");
+  var nannyPiper2 =document.getElementById("nannyPiper2");
+  var hall =document.getElementById("downHall");
+  var lightBtn =document.getElementById("light");
+  var lightsOut =document.getElementById("lightsOut");
+  var transform =document.getElementById("transform");
+  var bgMove =document.getElementById("bg7");
+  var transFormWav =document.getElementById("transformWav");
+  var bedtime =document.getElementById("bedtimeWav");
+  var shadowAni =document.getElementById("feelers4");
+  var nomNomAni =document.getElementById("nomNom");
+  var nannArms =document.getElementById("nannyArms");
 // Function that prints the text of the story one character at a time.
   function pageOne(){
      var i = 0;
@@ -51,62 +50,12 @@ var nannArms =document.getElementById("nannyArms");
       i++;
     }, 100);
   }
-  var showTwo =document.getElementById("showType2");
-  var scene2Type =document.getElementById("scene2Type").textContent;
-  var scene2Array = scene2Type.split("");
 
-  function pageTwo(){
-     var i = 0;
-     myVar = setInterval(function(){
-      showTwo.innerHTML += scene2Array[i]
-      if(i == scene2Array.length-1){
-         clearInterval(myVar);
-       }
-      i++;
-    }, 100);
-  }
+  var scene2Type =document.getElementById("scene2Type");
+  var scene3Type = document.getElementById("scene3Type");
+  var scene4Type = document.getElementById("scene4Type");
+  var scene5Type = document.getElementById("scene5Type");
 
-  var showThree =document.getElementById("showType3");
-  var scene3Type = document.getElementById("scene3Type").textContent;
-  var scene3Array = scene3Type.split("");
-  function pageThree(){
-     var i = 0;
-     myVar = setInterval(function(){
-      showThree.innerHTML += scene3Array[i]
-      if(i == scene3Array.length-1){
-         clearInterval(myVar);
-       }
-      i++;
-    }, 100);
-  }
-
-  var showFour =document.getElementById("showType4");
-  var scene4Type = document.getElementById("scene4Type").textContent;
-  var scene4Array = scene4Type.split("");
-  function pageFour(){
-     var i = 0;
-     myVar = setInterval(function(){
-      showFour.innerHTML += scene4Array[i]
-      if(i == scene4Array.length-1){
-         clearInterval(myVar);
-       }
-      i++;
-    }, 100);
-  }
-
-  var showFive =document.getElementById("showType5");
-  var scene5Type = document.getElementById("scene5Type").textContent;
-  var scene5Array = scene5Type.split("");
-  function pageFive(){
-     var i = 0;
-     myVar = setInterval(function(){
-      showFive.innerHTML += scene5Array[i]
-      if(i == scene5Array.length-1){
-         clearInterval(myVar);
-       }
-      i++;
-    }, 100);
-  }
 
   var showSix =document.getElementById("showType6");
   var scene6Type = document.getElementById("scene6Type").textContent;
@@ -137,6 +86,7 @@ var nannArms =document.getElementById("nannyArms");
     }
     if (scene.scrollLeft < 5600 && scene.scrollLeft > 5500){
       children.style.animationPlayState = "running";
+
     }
     if (scene.scrollLeft < 6980 && scene.scrollLeft > 6880){
       nannyPiper.style.animationPlayState = "running";
@@ -157,10 +107,16 @@ var nannArms =document.getElementById("nannyArms");
     }
   }
   nannyAni.addEventListener("animationend", pageOne);
-  nannyShadowSprite.addEventListener("animationend", pageThree);
-  main.addEventListener("play", pageTwo);
-  stairs.addEventListener("play", pageFour);
-  downHall.addEventListener("play", pageFive);
+  main.addEventListener("play", function(){
+  scene2Type.style.animationPlayState = "running";
+  });
+
+  stairs.addEventListener("play", function(){
+    scene4Type.style.animationPlayState = "running";
+  });
+  downHall.addEventListener("play", function(){
+    scene5Type.style.animationPlayState = "running";
+  });
   bedtimeWav.addEventListener("play", pageSix);
 
   nannyPiper2.addEventListener("animationend", function(){
@@ -169,7 +125,7 @@ var nannArms =document.getElementById("nannyArms");
 
   children.addEventListener("animationend", function(){
     nannyShadowSprite.style.animationPlayState = "running";
-    // pageThree();
+    scene3Type.style.animationPlayState = "running";
   });
   var hudClick =document.getElementById("clickY");
   var hud1 = window.setTimeout(function(){
@@ -203,6 +159,7 @@ var nannArms =document.getElementById("nannyArms");
     lightsOut.style.display = "block";
     transform.style.animationPlayState ="running";
     bgMove.style.animationPlayState ="running";
+    showSix.style.display = "none";
     transFormWav.play();
     bedtimeWav.pause();
     nomNomAni.style.display = "block";
