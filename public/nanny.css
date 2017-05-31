@@ -796,6 +796,7 @@ footer{
 	animation-play-state: paused;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1) translateZ(0);
+	-webkit-transform: translate3d(0, 0, 0);
 }
 @keyframes nannyLead{
 	0%{
@@ -950,6 +951,9 @@ footer{
 	display: block;
 	pointer-events: auto;
 }
+#light:hover{
+	transform: scale(1.2);
+}
 #transform{
 	position: absolute;
 	pointer-events: none;
@@ -962,6 +966,7 @@ footer{
 	animation-play-state: paused;
 	animation-fill-mode: forwards;
 	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
 	-webkit-transform: scale(.8);
 	z-index: 3;
 }
@@ -987,6 +992,7 @@ footer{
 	animation-fill-mode: forwards;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(.7);
+	-webkit-transform: translate3d(0, 0, 0);
 	z-index: 2;
 	display: none;
 }
