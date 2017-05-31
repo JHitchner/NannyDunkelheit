@@ -110,7 +110,7 @@ var nannArms =document.getElementById("nannyArms");
 
   var showSix =document.getElementById("showType6");
   var scene6Type = document.getElementById("scene6Type").textContent;
-  var scene5Array = scene6Type.split("");
+  var scene6Array = scene6Type.split("");
   function pageSix(){
      var i = 0;
      myVar = setInterval(function(){
@@ -122,7 +122,7 @@ var nannArms =document.getElementById("nannyArms");
     }, 100);
   }
   musicBox.play();
-  nannyAni.addEventListener("animationend", pageOne);
+
 // Animation Triggers By Scrollbar Position
 
   scene.onscroll=function(){
@@ -156,16 +156,20 @@ var nannArms =document.getElementById("nannyArms");
       }, 8500);
     }
   }
+  nannyAni.addEventListener("animationend", pageOne);
+  nannyShadowSprite.addEventListener("animationend", pageThree);
   main.addEventListener("play", pageTwo);
+  stairs.addEventListener("play", pageFour);
   downHall.addEventListener("play", pageFive);
+  bedtimeWav.addEventListener("play", pageSix);
+
   nannyPiper2.addEventListener("animationend", function(){
     bedtimeWav.play();
   })
-   stairs.addEventListener("play", pageFour);
 
   children.addEventListener("animationend", function(){
     nannyShadowSprite.style.animationPlayState = "running";
-    pageThree();
+    // pageThree();
   });
   var hudClick =document.getElementById("clickY");
   var hud1 = window.setTimeout(function(){
@@ -184,7 +188,6 @@ var nannArms =document.getElementById("nannyArms");
     scene.style.whiteSpace = "nowrap"
     creak.play();
     whisperOpen.play();
-    console.log("clicked");
   });
 
   buttonStart.addEventListener("click", function(){
@@ -194,11 +197,8 @@ var nannArms =document.getElementById("nannyArms");
       shadow.style.animationPlayState = "running"
       shadow.style.display ="block";
     }, 2000);
-    console.log("I was clicked");
   });
-   bedtimeWav.addEventListener("play", pageSix);
   lightBtn.addEventListener("click", function(){
-    console.log("I was so clicked");
     lightBtn.style.display = "none";
     lightsOut.style.display = "block";
     transform.style.animationPlayState ="running";
@@ -214,7 +214,7 @@ var nannArms =document.getElementById("nannyArms");
     nomNomAni.addEventListener("animationend", function(){
       window.setTimeout(function(){
           location.assign("/contact")
-      }, 8000)
+      }, 7000)
     })
   });
 

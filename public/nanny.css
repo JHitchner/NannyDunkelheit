@@ -484,7 +484,7 @@ footer{
 }
 #scene3Type{
 	position: absolute;
-	height: 300px;
+	/*height: 00px;*/
 	width: 600px;
 	font-size: 25px;
 	color: white;
@@ -495,12 +495,14 @@ footer{
 	-webkit-transform: scale(1);
 	position: absolute;
 	max-width: 450px;
-	top: 150px;
+	height: 600px;
+	top: 400px;
 	left: 820px;
 	color: white;
 	white-space: normal;
 	margin: 0 auto;
 	font-family: 'Arima Madurai', cursive;
+	text-shadow: 2px 2px black;
 	font-size: 25px;
 	z-index: 2;
 }
@@ -554,7 +556,6 @@ footer{
 			background-position: -4806px;
 		}
 }
-
 .bg5::after {
   background: url("/images/scene4.png") center center no-repeat;
   height: 100%;
@@ -574,7 +575,7 @@ footer{
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
 	position: absolute;
-	max-width: 550px;
+	max-width: 400px;
 	top: 450px;
 	left: 1300px;
 	color: white;
@@ -643,17 +644,6 @@ footer{
 		transform: translateX(150px) translateY(-400px) scale(.4);
 	}
 }
-#trialType5{
-	position: absolute;
-	top: 500px;
-	left: 1300px;
-	width: 300px;
-	height: 400px;
-	font-family: 'Arima Madurai', cursive;
-	color: white;
-	white-space: normal;
-	font-size: 25px;
-}
 #bg6::after {
 	top: -50px;
   background-image: url("/images/scene5.png");
@@ -676,9 +666,9 @@ footer{
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
 	position: absolute;
-	max-width: 550px;
-	top: 450px;
-	left: 1300px;
+	max-width: 450px;
+	top: 750px;
+	left: 700px;
 	color: white;
 	white-space: normal;
 	margin: 0 auto;
@@ -835,9 +825,9 @@ footer{
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
 	position: absolute;
-	max-width: 550px;
-	top: 150px;
-	left: 300px;
+	max-width: 400px;
+	top: 100px;
+	left: 750px;
 	color: white;
 	white-space: normal;
 	margin: 0 auto;
@@ -974,10 +964,8 @@ footer{
 .fb-like{
 	position: relative;
 	top: -640px;
-	left: 1100px;
+	left: 1150px;
 	z-index: 5;
-	height: 50px;
-	width: 200px;
 }
 #contact_emailBehind {
   position:absolute;
@@ -991,7 +979,7 @@ footer{
   opacity:.7;
 }
 #info_container {
-  position:absolute;
+  position:relative;
   left:177px;
   top:255px;
   height:1088px;
@@ -999,42 +987,53 @@ footer{
   border:1px solid #FF686B;
 }
 input, textarea {
-  font-family:'Amatic SC', cursive;
-  font-size: 20px;
+  font-family: 'Arima Madurai', cursive;
+	text-align: left;
+	font-size: 20px;
+	padding-top: 10px;
+	background-color: rgba(0,0,0, .5);
+	color: white;
+	border: none;
 }
 #emailSub {
-  position:absolute;
+  position:relative;
   height:500px;
   width:400px;
   left: 1150px;
-  top: 350px;
+  top: -600px;
 	z-index: 2;
+	border: none;
 }
 #subject {
   position:relative;
-  width: 400px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+  width: 450px;
   height:30px;
-}
-#sender {
-  position:relative;
-  width:200px;
-  height:30px;
-  bottom:30px;
+	border: none;
 }
 #receiver {
+	padding-left: 10px;
   position:relative;
   width:200px;
   height:30px;
   bottom:20px;
+	border: none;
 }
 #submit {
   font-size: 20px;
   font-weight:bold;
   position:relative;
+	color: #D6BA73;
+	background-color: #62080E;
   height:30px;
+	border: 2px solid #D6BA73;
   width:100px;
-  top:400px;
-  left:950px;
+  top:-690px;
+  left:1150px;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 20px;
+	z-index: 4;
 }
 #contactNanny{
 	background-image: url("/images/contact_nanny.png");
