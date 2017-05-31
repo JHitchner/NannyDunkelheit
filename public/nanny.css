@@ -84,27 +84,23 @@ footer{
 	white-space: normal;
 }
 /*Home Page*/
-/*font-family: 'Barrio', cursive;
-font-family: 'Calligraffitti', cursive;
-font-family: 'Frijole', cursive;
-font-family: 'Hanalei', cursive;*/
 #clickY{
-
 	position: absolute;
 	background-color: #62080E;
-	border: 2px solid #62080E;
 	border-radius: 15px;
 	z-index: 6;
 	top: 100px;
 	width: 350px;
-	padding: 5px;
+	padding: 10px;
 	text-align: center;
-	height: 100px;
+	height: 50px;
 	color: white;
 	display: none;
 	color: #D6BA73;
+	border: 3px solid #D6BA73;
 	font-family: 'Julius Sans One', sans-serif;
-	font-size: 40px;
+	font-size: 30px;
+	opacity: .7;
 }
 #darkness{
 	z-index: 5;
@@ -121,7 +117,6 @@ font-family: 'Hanalei', cursive;*/
 	animation-play-state: paused;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: scale(1);
-
 }
 @keyframes flicker {
 	0% { opacity: 0;}
@@ -192,13 +187,27 @@ font-family: 'Hanalei', cursive;*/
 	transform: scale(1) translateZ(0);
 }
 @keyframes flickerAnimation {
-	0% { opacity: 0;}
-	2% { opacity: .8;}
-	4% { opacity: 0;}
-	5% { opacity: 0;}
-	6% {opacity: 1;}
-	7% { opacity: 0;}
-	100% {opacity: 0;}
+	0%{
+		opacity: 0;
+	}
+	2%{
+		opacity: .8;
+	}
+	4%{
+		opacity: 0;
+	}
+	5%{
+		opacity: 0;
+	}
+	6%{
+		opacity: 1;
+	}
+	7%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
+	}
 }
 #nanny{
 	position: absolute;
@@ -290,13 +299,6 @@ font-family: 'Hanalei', cursive;*/
   -webkit-background-size: cover;
   background-size: cover;
 }
-/*#butt{
-  position: absolute;
-  top: 100px;
-  left: 100px;
-  z-index: 3;
-	font-family: 'Berkshire Swash', cursive;
-}*/
 #clickDoor{
 	position: absolute;
 	background-color: #62080E;
@@ -324,20 +326,27 @@ font-family: 'Hanalei', cursive;*/
 	transform: scale(1) translateZ(0);
 	z-index: -1;
 }
-#trialType3{
+#scene2Type{
 	position: absolute;
-	left: 500px;
-	font-size: 25px;
 	height: 300px;
-	width: 400px;
-	font-family: 'Quicksand', sans-serif;
+	width: 600px;
+	font-size: 25px;
+	color: white;
+	display: none;
+}
+#showType2{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+	position: absolute;
+	max-width: 450px;
+	top: 350px;
+	left: 400px;
 	color: white;
 	white-space: normal;
 	margin: 0 auto;
-	-webkit-backface-visibility: hidden;
-	-webkit-transform: scale(1);
-	backface-visibility: hidden;
-	transform: scale(1) translateZ(0);
+	font-family: 'Arima Madurai', cursive;
+	font-size: 25px;
+	z-index: 2;
 }
 #feelersOne{
 	position: absolute;
@@ -403,7 +412,6 @@ font-family: 'Hanalei', cursive;*/
 	background: url("/images/frontDoor.png") center center no-repeat;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform-style: preserve-3d;
-	/*-webkit-transform: translateZ(0);*/
 	transition: all 300ms ease-in-out;
 }
 #door:hover{
@@ -466,7 +474,6 @@ font-family: 'Hanalei', cursive;*/
 		transform: translateX(300px) scale(1.2);
 	}
 }
-
 .bg4::after {
 	top: -50px;
   background: url("/images/scene3.png") center center no-repeat;
@@ -475,6 +482,28 @@ font-family: 'Hanalei', cursive;*/
   -webkit-background-size: cover;
   background-size: cover;
 }
+#scene3Type{
+	position: absolute;
+	height: 300px;
+	width: 600px;
+	font-size: 25px;
+	color: white;
+	display: none;
+}
+#showType3{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+	position: absolute;
+	max-width: 450px;
+	top: 150px;
+	left: 820px;
+	color: white;
+	white-space: normal;
+	margin: 0 auto;
+	font-family: 'Arima Madurai', cursive;
+	font-size: 25px;
+	z-index: 2;
+}
 #children1{
 	position: absolute;
 	top: 400px;
@@ -482,7 +511,7 @@ font-family: 'Hanalei', cursive;*/
 	width: 400px;
   height: 500px;
   background: url("images/children1.png") center center no-repeat;
-	animation: meeting 5s;
+	animation: meeting 3s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: forwards;
 	animation-play-state: paused;
@@ -495,11 +524,6 @@ font-family: 'Hanalei', cursive;*/
 		transform: translateX(-300px);
 	}
 }
-#sprite{
-	position: absolute;
-	left: 400px;
-	z-index: 4;
-}
 #nanny_sil3{
 	position: absolute;
 	top: 170px;
@@ -510,7 +534,6 @@ font-family: 'Hanalei', cursive;*/
   background: url("images/nanny_sil3.png") center center no-repeat;
 	z-index: 2;
 	}
-
 #nannyShadow_sprite{
 	position: absolute;
 	left: 390px;
@@ -533,12 +556,33 @@ font-family: 'Hanalei', cursive;*/
 }
 
 .bg5::after {
-	/*top: -50px;*/
   background: url("/images/scene4.png") center center no-repeat;
   height: 100%;
   width: 100%;
   -webkit-background-size: cover;
   background-size: cover;
+}
+#scene4Type{
+	position: absolute;
+	height: 300px;
+	width: 600px;
+	font-size: 25px;
+	color: white;
+	display: none;
+}
+#showType4{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+	position: absolute;
+	max-width: 550px;
+	top: 450px;
+	left: 1300px;
+	color: white;
+	white-space: normal;
+	margin: 0 auto;
+	font-family: 'Arima Madurai', cursive;
+	font-size: 25px;
+	z-index: 5;
 }
 #nanny_piper{
 	position: absolute;
@@ -619,6 +663,28 @@ font-family: 'Hanalei', cursive;*/
   width: 100%;
   -webkit-background-size: cover;
   background-size: cover;
+}
+#scene5Type{
+	position: absolute;
+	height: 300px;
+	width: 600px;
+	font-size: 25px;
+	color: white;
+	display: none;
+}
+#showType5{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+	position: absolute;
+	max-width: 550px;
+	top: 450px;
+	left: 1300px;
+	color: white;
+	white-space: normal;
+	margin: 0 auto;
+	font-family: 'Arima Madurai', cursive;
+	font-size: 25px;
+	z-index: 5;
 }
 #bust{
 	position: absolute;
@@ -757,6 +823,28 @@ font-family: 'Hanalei', cursive;*/
 		transform: translateY(600px);
 	}
 }
+#scene6Type{
+	position: absolute;
+	height: 300px;
+	width: 600px;
+	font-size: 25px;
+	color: white;
+	display: none;
+}
+#showType6{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+	position: absolute;
+	max-width: 550px;
+	top: 150px;
+	left: 300px;
+	color: white;
+	white-space: normal;
+	margin: 0 auto;
+	font-family: 'Arima Madurai', cursive;
+	font-size: 25px;
+	z-index: 5;
+}
 #lightsOut{
 	position: absolute;
 	height: 1900px;
@@ -848,20 +936,20 @@ font-family: 'Hanalei', cursive;*/
 	}
 }
 #nomNom{
-position: absolute;
-width: 1956px;
-height: 1908px;
-top:-800px;
-background: url("images/nomNomV2.png") left center no-repeat;
-animation: nom 6.5s steps(4);
-animation-play-state: paused;
-animation-fill-mode: forwards;
--webkit-backface-visibility: hidden;
-display: none;
--webkit-transform: scale(.8);
-z-index: -1;
-opacity: .7;
-pointer-events: none;
+	position: absolute;
+	width: 1956px;
+	height: 1908px;
+	top:-800px;
+	background: url("images/nomNomV2.png") left center no-repeat;
+	animation: nom 6.5s steps(4);
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	-webkit-backface-visibility: hidden;
+	display: none;
+	-webkit-transform: scale(.8);
+	z-index: -1;
+	opacity: .7;
+	pointer-events: none;
 }
 
 @keyframes nom{
@@ -920,7 +1008,7 @@ input, textarea {
   width:400px;
   left: 1150px;
   top: 350px;
-	z-index: 4;
+	z-index: 2;
 }
 #subject {
   position:relative;
@@ -940,7 +1028,6 @@ input, textarea {
   bottom:20px;
 }
 #submit {
-  /*font-family:'Josefin Slab', serif;*/
   font-size: 20px;
   font-weight:bold;
   position:relative;
@@ -948,6 +1035,40 @@ input, textarea {
   width:100px;
   top:400px;
   left:950px;
+}
+#contactNanny{
+	background-image: url("/images/contact_nanny.png");
+	background-position: center center;
+	background-repeat:  no-repeat;
+	height: 950px;
+	width: 850px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	z-index: 3;
+	left: 565px;
+	top: 250px;
+	opacity: .8;
+	position: absolute;
+	animation: sneak 25s infinite;
+	animation-timing-function: ease-in-out;
+}
+@keyframes sneak{
+	0%{
+		transform: translateX(1500px);
+		opacity: .4;
+	}
+	50%{
+		transform: translateX(900px);
+		opacity: .4;
+	}
+	75%{
+		transform: translateX(-1300px);
+		opacity: .4;
+	}
+	100%{
+		transform: translateX(-1300px);
+		opacity: .4;
+	}
 }
 #candle{
 	background-image: url("/images/candle.png");
@@ -976,26 +1097,4 @@ input, textarea {
 	100%{
 		transform: scale(1);
 		opacity: .5;
-}
-
-
-/*type animation*/
-#typingOne {
-  width:400px;
-}
-#typingOne p {
-  position: relative;
-  top:-20px;
-  font-size: 20px;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .12em solid orange; /* The typwriter cursor*/
-  white-space: nowrap;
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .10em; /* Adjust as needed */
-  /*animation:
-    typing 5.5s steps(40, end),
-    blink-caret .75s step-end infinite;*/
-  /*animation-play-state: paused;*/
-  color: white;
-  z-index: 3;
 }

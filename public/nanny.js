@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var test = document.getElementById("test");
   var scene = document.getElementById("scene_container");
   var buttonStart = document.getElementById("door");
-  var trialType = document.getElementById("scene1Type").textContent;
-  var trialArray = trialType.split("");
+  var scene1Type = document.getElementById("scene1Type").textContent;
+  var scene1Array = scene1Type.split("");
   var show = document.getElementById("showType");
   var blockY = document.getElementById("nannyBlock");
   // var proceedBtn = document.getElementById("startScroll");
@@ -44,25 +44,96 @@ var nannArms =document.getElementById("nannyArms");
   function pageOne(){
      var i = 0;
      myVar = setInterval(function(){
-      show.innerHTML += trialArray[i]
-      if(i == trialArray.length-1){
+      show.innerHTML += scene1Array[i]
+      if(i == scene1Array.length-1){
          clearInterval(myVar);
        }
       i++;
     }, 100);
   }
-// Animation Triggers By Scrollbar Position
+  var showTwo =document.getElementById("showType2");
+  var scene2Type =document.getElementById("scene2Type").textContent;
+  var scene2Array = scene2Type.split("");
+
+  function pageTwo(){
+     var i = 0;
+     myVar = setInterval(function(){
+      showTwo.innerHTML += scene2Array[i]
+      if(i == scene2Array.length-1){
+         clearInterval(myVar);
+       }
+      i++;
+    }, 100);
+  }
+
+  var showThree =document.getElementById("showType3");
+  var scene3Type = document.getElementById("scene3Type").textContent;
+  var scene3Array = scene3Type.split("");
+  function pageThree(){
+     var i = 0;
+     myVar = setInterval(function(){
+      showThree.innerHTML += scene3Array[i]
+      if(i == scene3Array.length-1){
+         clearInterval(myVar);
+       }
+      i++;
+    }, 100);
+  }
+
+  var showFour =document.getElementById("showType4");
+  var scene4Type = document.getElementById("scene4Type").textContent;
+  var scene4Array = scene4Type.split("");
+  function pageFour(){
+     var i = 0;
+     myVar = setInterval(function(){
+      showFour.innerHTML += scene4Array[i]
+      if(i == scene4Array.length-1){
+         clearInterval(myVar);
+       }
+      i++;
+    }, 100);
+  }
+
+  var showFive =document.getElementById("showType5");
+  var scene5Type = document.getElementById("scene5Type").textContent;
+  var scene5Array = scene5Type.split("");
+  function pageFive(){
+     var i = 0;
+     myVar = setInterval(function(){
+      showFive.innerHTML += scene5Array[i]
+      if(i == scene5Array.length-1){
+         clearInterval(myVar);
+       }
+      i++;
+    }, 100);
+  }
+
+  var showSix =document.getElementById("showType6");
+  var scene6Type = document.getElementById("scene6Type").textContent;
+  var scene5Array = scene6Type.split("");
+  function pageSix(){
+     var i = 0;
+     myVar = setInterval(function(){
+      showSix.innerHTML += scene6Array[i]
+      if(i == scene6Array.length-1){
+         clearInterval(myVar);
+       }
+      i++;
+    }, 100);
+  }
   musicBox.play();
+  nannyAni.addEventListener("animationend", pageOne);
+// Animation Triggers By Scrollbar Position
+
   scene.onscroll=function(){
     if (scene.scrollLeft < 1700 && scene.scrollLeft > 1600){
-      console.log("woo");
       nannyAni.style.animationPlayState= "running";
       musicBox.pause();
       storm.play();
     }
     if (scene.scrollLeft < 2500 && scene.scrollLeft > 2400){
       main.play();
-      console.log("bam");
+      musicBox.pause();
     }
     if (scene.scrollLeft < 5600 && scene.scrollLeft > 5500){
       children.style.animationPlayState = "running";
@@ -85,25 +156,22 @@ var nannArms =document.getElementById("nannyArms");
       }, 8500);
     }
   }
+  main.addEventListener("play", pageTwo);
+  downHall.addEventListener("play", pageFive);
   nannyPiper2.addEventListener("animationend", function(){
     bedtimeWav.play();
   })
-  // spriteBtn.addEventListener("click", function(){
-  //   nannyShadowSprite.style.animationPlayState = "running";
-  // })
+   stairs.addEventListener("play", pageFour);
+
   children.addEventListener("animationend", function(){
     nannyShadowSprite.style.animationPlayState = "running";
+    pageThree();
   });
   var hudClick =document.getElementById("clickY");
   var hud1 = window.setTimeout(function(){
       hudClick.style.display = "block";
     }, 8000);
 
-  nannyAni.addEventListener("animationend", pageOne);
-  // var hudClick2 =document.getElementById("clickDoor");
-  // var woo = window.setTimeout(function(){
-  //     hudClick2.style.display = "block";
-  //   }, 12000);
 // Remove Block,Trigger HomePage Animtion and allow scroll
   blockY.addEventListener("click", function(){
     window.clearTimeout(hud1);
@@ -120,8 +188,6 @@ var nannArms =document.getElementById("nannyArms");
   });
 
   buttonStart.addEventListener("click", function(){
-    // window.clearTimeout(woo);
-    // hudClick2.style.display = "none";
     knock.play();
     window.setTimeout(function() {
       mom.style.animationPlayState = "running"
@@ -130,31 +196,27 @@ var nannArms =document.getElementById("nannyArms");
     }, 2000);
     console.log("I was clicked");
   });
+   bedtimeWav.addEventListener("play", pageSix);
+  lightBtn.addEventListener("click", function(){
+    console.log("I was so clicked");
+    lightBtn.style.display = "none";
+    lightsOut.style.display = "block";
+    transform.style.animationPlayState ="running";
+    bgMove.style.animationPlayState ="running";
+    transFormWav.play();
+    bedtimeWav.pause();
+    nomNomAni.style.display = "block";
+    nomNomAni.style.animationPlayState = "running";
+    window.setTimeout(function() {
+      nannArms.style.display = "block";
+      nannArms.style.animationPlayState = "running";
+    }, 4000);
+    nomNomAni.addEventListener("animationend", function(){
+      window.setTimeout(function(){
+          location.assign("/contact")
+      }, 8000)
+    })
+  });
 
-lightBtn.addEventListener("click", function(){
-  console.log("I was so clicked");
-  lightBtn.style.display = "none";
-  lightsOut.style.display = "block";
-  transform.style.animationPlayState ="running";
-  bgMove.style.animationPlayState ="running";
-  transFormWav.play();
-  bedtimeWav.pause();
-  nomNomAni.style.display = "block";
-  nomNomAni.style.animationPlayState = "running";
-  window.setTimeout(function() {
-    nannArms.style.display = "block";
-    nannArms.style.animationPlayState = "running";
-  }, 4000);
+
 });
-
-
-});
-
-
-// Page 4,5, 6, 7, 8
-// Page 6,7,8 - 6 and 5 with animations
-// Page 9,10,11 - 7 and 8 with Animations
-//  Page  10 8 and 9 with animations
-//  Page 11 animations, add sound
-//  Animation tweaks, bug fixes, music
-//
