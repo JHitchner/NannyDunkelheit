@@ -11,7 +11,8 @@ end
 post "/response" do
   from = SendGrid::Email.new(email:params[:from])
   subject = params[:subject]
-  to = SendGrid::Email.new(email: params[:to])
+  # to = SendGrid::Email.new(email: params[:to])
+  to = SendGrid::Email.new(email:'juliet.hitchner@gmail.com')
   content = SendGrid::Content.new(type: 'text/plain', value: params[:content])
   mail = SendGrid::Mail.new(from, subject, to, content)
   sg = SendGrid::API.new(api_key:ENV["SENDGRID_API_KEY"])
@@ -20,11 +21,3 @@ post "/response" do
   puts response.body
   redirect "/contact"
 end
-
-# get "/how" do
-#   erb :how
-# end
-#
-# get "/testimonials" do
-#   erb :testimonials
-# end
