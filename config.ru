@@ -1,2 +1,2 @@
-require '/nanny.rb'
+require './nanny.rb'
 run Sinatra::Application
