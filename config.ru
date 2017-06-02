@@ -1,2 +1,2 @@
-require './server.rb'
+require '.nanny.rb'
 run Sinatra::Application
