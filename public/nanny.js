@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         shadowAni.style.animationPlayState = "running";
       }, 7000);
     }
-    if (scene.scrollLeft < 7800 && scene.scrollLeft > 7700){
+    if (scene.scrollLeft < 7900 && scene.scrollLeft > 7800){
       nannyPiper2.style.animationPlayState = "running";
       downHall.play();
       stairs.pause();

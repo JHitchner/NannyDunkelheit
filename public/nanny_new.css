@@ -39,13 +39,13 @@
 		perspective: 2px;
 		-webkit-perspective: 2px;
 		-moz-perspective: 5px;
-		width: 100%
+		width: 1900px;
 	}
 	.section {
 		/* Needed for children to be absolutely positioned relative to the parent. */
 		position: relative;
 		height: 100vh;
-		width: 100%;
+		width: 1900px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -56,9 +56,9 @@
 	.parallax::after {
 		/* Display and position the pseudo-element */
 		content: " ";
-		position: relative;
-		min-height: 100%;
-		min-width: 100%;
+		position: absolute;
+		min-height: 900px;
+		min-width: 1900px;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -67,7 +67,6 @@
 		-webkit-overflow-scrolling: touch;
 		z-index: -2;
 		-webkit-transform:translateZ(-1px) scale(1.5);
-		-webkit-background-size: 100%;
 		transform: translateZ(-1px) scale(1.5);
 		transform-style: preserve-3d;
 		-moz-transform:translateZ(-1px) scale(1);
@@ -97,7 +96,7 @@
 		border-radius: 15px;
 		z-index: 3;
 		top: 100px;
-		left: 700px;
+		left: 30%;
 		width: 350px;
 		padding: 10px;
 		text-align: center;
@@ -144,17 +143,23 @@
 		height: 350px;
 		width: 380px;
 		z-index: 4;
-		transform: scale(1.03);
-		left: 75%;
+		transform: scale(1);
+		left: 60%;
 		cursor: pointer;
 		transition: all 500ms ease-in-out;
 	}
 	#nannyBlock:hover{
-		transform: scale(1.2) rotate(3deg);
+		transform: scale(1.1) rotate(3deg);
 	}
 	#bg1::after{
 	  min-height: 100%;
-	  width: auto;
+	  min-width: 100%;
+		width: 1900px;
+		height: 1000px;
+		top: -75px;
+		position: absolute;
+		left: -200px;
+		transform: scale(.87);
 	  background-image: url("/images/homePageNanny.jpg");
 		-moz-background-image:url("/images/homePageNanny.jpg");
 		-moz-background-position: center center;
@@ -169,8 +174,10 @@
 
 	.bg2::after {
 	  background: url("/images/nannyScene1.png") center center no-repeat;
-	  height: 100%;
-	  width: 100%;
+		min-height: 100%;
+	 	min-width: 100%;
+	 	width: 100%;
+	 	height: 100%;
 	  -webkit-background-size: cover;
 	  background-size: cover;
 	}
@@ -262,7 +269,6 @@
 		transform: translate(-1);
 		background: url("/images/tree.png") center center no-repeat;
 		animation: swaying 2s infinite;
-		/*transition-timing-function: ease-in-out;*/
 		-webkit-backface-visibility: hidden;
 		-webkit-transform: scale(1);
 		backface-visibility: hidden;
@@ -522,7 +528,7 @@
 		max-width: 450px;
 		height: 600px;
 		top: 500px;
-		left: 850px;
+		left: 900px;
 		color: white;
 		white-space: normal;
 		margin: 0 auto;
@@ -623,8 +629,8 @@
 		-webkit-transform: scale(1);
 		position: absolute;
 		max-width: 400px;
-		top: 450px;
-		left: 1300px;
+		top: 550px;
+		left: 1200px;
 		color: white;
 		white-space: normal;
 		margin: 0 auto;
@@ -888,7 +894,7 @@
 	#bg7::after {
 	  background: url("/images/scene6.png") center center no-repeat;
 	  height: 100%;
-	  width: 100%;
+	  width: 1900px;
 	  -webkit-background-size: cover;
 	  background-size: cover;
 	}
@@ -1047,16 +1053,16 @@
 	.contactPage{
 	  background-image: url("/images/contact.png");
 		background-position: center center;
-		background-repeat:  no-repeat;
-	  height: 900px;
-	  width: 1900px;
+		background-repeat: no-repeat;
+	  height:900px;
+	  width: 100%;
 	  -webkit-background-size: cover;
 	  background-size: cover;
 	}
 	.fb-like{
 		position: relative;
 		top: -640px;
-		left: 1150px;
+		left: 880px;
 		z-index: 5;
 	}
 	#contact_emailBehind {
@@ -1091,7 +1097,7 @@
 	  position:relative;
 	  height:500px;
 	  width:400px;
-	  left: 1150px;
+	  left: 880px;
 	  top: -600px;
 		z-index: 2;
 		border: none;
@@ -1122,7 +1128,7 @@
 		border: 2px solid #D6BA73;
 	  width:100px;
 	  top:-690px;
-	  left:1150px;
+	  left:880px;
 		font-family: 'Julius Sans One', sans-serif;
 		font-size: 20px;
 		z-index: 4;
@@ -1170,7 +1176,7 @@
 		-webkit-background-size: cover;
 		background-size: cover;
 		z-index: 3;
-		left: 565px;
+		left:23%;
 		top: 0px;
 		position: absolute;
 		animation: glowing 4s infinite;
