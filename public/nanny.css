@@ -1,6 +1,7 @@
 
 html body{
 	overflow: hidden;
+	height: 100%;
 	/*overflow-x: scroll;*/
 	width: 100%;
 }
@@ -8,12 +9,11 @@ footer{
   z-index: 3;
   background-color: black;
   position: fixed;
+	bottom: 10px;
   height: 90px;
   width: 100%;
-  top: 893px;
-  left: 8px;
+  left: 10px;
 	background: url("/images/nav.png") center center no-repeat;
-  /*display: none;*/
 }
 #contactLink{
 	position: relative;
@@ -38,6 +38,8 @@ footer{
 	/*overflow-y: hidden;*/
 	overflow-x: auto;
 	perspective: 2px;
+	-webkit-perspective: 2px;
+	-moz-perspective: 5px;
 	width: 100%
 }
 .section {
@@ -48,8 +50,6 @@ footer{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: white;
-	text-shadow: 0 0 5px #000;
 }
 /* Move the pseudo-element back away from the camera,
  * then scale it back up to fill the viewport.
@@ -58,13 +58,20 @@ footer{
 	/* Display and position the pseudo-element */
 	content: " ";
 	position: absolute;
+	height: 100%;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	background-size: 100%;
 	z-index: -2;
+
+	-webkit-transform:translateZ(-1px) scale(1.5);
+	-webkit-background-size: 100%;
 	transform: translateZ(-1px) scale(1.5);
+	transform-style: preserve-3d;
+	-moz-transform:translateZ(-1px) scale(1);
+	-moz-transform-style: preserve-3d;
 }
 
 #scene_container{
@@ -147,10 +154,16 @@ footer{
 #bg1::after{
   height: 100%;
   width: 100%;
-  background-image: url("/images/homePageNanny.jpg"); background-position:center center;
+  background-image: url("/images/homePageNanny.jpg");
+	-webkit-background-image:url("/images/homePageNanny.jpg");
+	-webkit-background-position: center center;
+	-webkit-background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-position:center center;
 	background-repeat:no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
+	background-attachment: fixed;
+ position: static;
 }
 /*Scene 1 -Nanny Arrives*/
 
@@ -160,7 +173,6 @@ footer{
   width: 100%;
   -webkit-background-size: cover;
   background-size: cover;
-
 }
 #scene1Background{
    position: absolute;
