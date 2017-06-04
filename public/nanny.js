@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var doorHud =document.getElementById("clickDoor");
   var scene1Type =document.getElementById("scene1Type").textContent;
   var scene1Array =scene1Type.split("");
+  var scene2Type =document.getElementById("scene2Type");
+  var scene3Type = document.getElementById("scene3Type");
+  var scene4Type = document.getElementById("scene4Type");
+  var scene5Type = document.getElementById("scene5Type");
+  var showSix =document.getElementById("showType6");
+  var scene6Type = document.getElementById("scene6Type").textContent;
+  var scene6Array = scene6Type.split("");
   var show =document.getElementById("showType");
   var blockY =document.getElementById("nannyBlock");
   var darknessAni =document.getElementById("darkness");
@@ -11,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var musicBox =document.getElementById("musicBox");
   var storm =document.getElementById("storm");
   var nannyAni = document.getElementById("nanny_sil");
-  var nannySprites =document.getElementById("nanny_sil3")
+  var nannySprites =document.getElementById("nanny_sil3");
   var children =document.getElementById("children1");
   var creak =document.getElementById("creak");
   var knock =document.getElementById("knock");
@@ -39,6 +46,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var shadowAni =document.getElementById("feelers4");
   var nomNomAni =document.getElementById("nomNom");
   var nannArms =document.getElementById("nannyArms");
+  var arrow =document.getElementById("arrow");
+
+  musicBox.play();
+// Remove Block,Trigger HomePage Animtion and allow scroll
+  blockY.addEventListener("click", function(){
+    window.clearTimeout(hud1);
+    clickY.style.display ="none";
+    darknessAni.style.animationPlayState = "running";
+    window.setTimeout(function() {
+      blockY.style.display = "none";
+      openBG.style.backgroundImage = "url('images/homePageNannyBlood.png')";
+    }, 2000);
+    scene.style.whiteSpace = "nowrap";
+    creak.play();
+    whisperOpen.play();
+  });
 // Function that prints the text of the story one character at a time.
   function pageOne(){
      var i = 0;
@@ -50,16 +73,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       i++;
     }, 100);
   }
-
-  var scene2Type =document.getElementById("scene2Type");
-  var scene3Type = document.getElementById("scene3Type");
-  var scene4Type = document.getElementById("scene4Type");
-  var scene5Type = document.getElementById("scene5Type");
-
-
-  var showSix =document.getElementById("showType6");
-  var scene6Type = document.getElementById("scene6Type").textContent;
-  var scene6Array = scene6Type.split("");
   function pageSix(){
      var i = 0;
      myVar = setInterval(function(){
@@ -70,8 +83,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       i++;
     }, 100);
   }
-  musicBox.play();
-
 // Animation Triggers By Scrollbar Position
 
   scene.onscroll=function(){
@@ -98,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     if (scene.scrollLeft < 7900 && scene.scrollLeft > 7800){
       nannyPiper2.style.animationPlayState = "running";
+      main.pause();
       downHall.play();
       stairs.pause();
       window.setTimeout(function() {
@@ -110,7 +122,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   main.addEventListener("play", function(){
   scene2Type.style.animationPlayState = "running";
   });
-
   stairs.addEventListener("play", function(){
     scene4Type.style.animationPlayState = "running";
   });
@@ -122,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   nannyPiper2.addEventListener("animationend", function(){
     bedtimeWav.play();
   })
-
   children.addEventListener("animationend", function(){
     nannyShadowSprite.style.animationPlayState = "running";
     scene3Type.style.animationPlayState = "running";
@@ -131,26 +141,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var hud1 = window.setTimeout(function(){
       hudClick.style.display = "block";
     }, 8000);
-
-// Remove Block,Trigger HomePage Animtion and allow scroll
-  blockY.addEventListener("click", function(){
-    window.clearTimeout(hud1);
-    clickY.style.display ="none";
-    darknessAni.style.animationPlayState = "running";
-    window.setTimeout(function() {
-      blockY.style.display = "none";
-      openBG.style.backgroundImage = "url('images/homePageNannyBlood.png')";
-    }, 2000);
-    scene.style.whiteSpace = "nowrap"
-    creak.play();
-    whisperOpen.play();
-  });
-
   buttonStart.addEventListener("click", function(){
     knock.play();
     window.setTimeout(function() {
-      mom.style.animationPlayState = "running"
-      shadow.style.animationPlayState = "running"
+      mom.style.animationPlayState = "running";
+      shadow.style.animationPlayState = "running";
       shadow.style.display ="block";
     }, 2000);
   });
@@ -170,10 +165,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, 4000);
     nomNomAni.addEventListener("animationend", function(){
       window.setTimeout(function(){
-          location.assign("/contact")
-      }, 7000)
-    })
+          location.assign("/contact");
+      }, 7000);
+    });
   });
-
-
 });
