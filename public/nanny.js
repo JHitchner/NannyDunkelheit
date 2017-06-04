@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     clickY.style.display ="none";
     darknessAni.style.animationPlayState = "running";
     window.setTimeout(function() {
+      alert("Scroll --->");
       blockY.style.display = "none";
       openBG.style.backgroundImage = "url('images/homePageNannyBlood.png')";
     }, 2000);
