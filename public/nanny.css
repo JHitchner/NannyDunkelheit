@@ -9,7 +9,7 @@
 	  background-color: black;
 	  position: fixed;
 		bottom: 10px;
-	  height: 10%;
+	  height: 90px;
 	  width: 100%;
 	  left: 10px;
 		background: url("/images/nav.png") center center no-repeat;
@@ -125,16 +125,6 @@
 		animation-play-state: paused;
 		-webkit-backface-visibility: hidden;
 		-webkit-transform: scale(1);
-	}
-	#arrow{
-		position: absolute;
-		left: 1500px;
-		top: 370px;
-		height: 100px;
-		width: 200px;
-		transform: scale(.87) rotate(-3deg);
-		z-index: 2;
-		/*display: none;*/
 	}
 	@keyframes flicker {
 		0% { opacity: 0;}

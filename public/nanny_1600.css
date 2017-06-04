@@ -125,16 +125,6 @@
 		-webkit-backface-visibility: hidden;
 		-webkit-transform: scale(1);
 	}
-	#arrow{
-		position: absolute;
-		left: 1500px;
-		top: 250px;
-		height: 100px;
-		width: 200px;
-		transform: scale(.87) rotate(-3deg);
-		z-index: 5;
-		display: none;
-	}
 	@keyframes flicker {
 		0% { opacity: 0;}
 		50% { opacity: 1;}

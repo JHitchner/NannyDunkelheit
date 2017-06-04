@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var blockY =document.getElementById("nannyBlock");
   var darknessAni =document.getElementById("darkness");
   var body =document.getElementsByTagName("body");
-  var musicBox =document.getElementById("musicBox");
+  // var musicBox =document.getElementById("musicBox");
   var storm =document.getElementById("storm");
   var nannyAni = document.getElementById("nanny_sil");
   var nannySprites =document.getElementById("nanny_sil3");
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var nannArms =document.getElementById("nannyArms");
   var arrow =document.getElementById("arrow");
 
-  musicBox.play();
+  // musicBox.play();
 // Remove Block,Trigger HomePage Animtion and allow scroll
   blockY.addEventListener("click", function(){
     window.clearTimeout(hud1);
@@ -88,12 +88,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   scene.onscroll=function(){
     if (scene.scrollLeft < 1700 && scene.scrollLeft > 1600){
       nannyAni.style.animationPlayState= "running";
-      musicBox.pause();
+      // musicBox.pause();
       storm.play();
     }
     if (scene.scrollLeft < 2500 && scene.scrollLeft > 2400){
       main.play();
-      musicBox.pause();
+      // musicBox.pause();
     }
     if (scene.scrollLeft < 5600 && scene.scrollLeft > 5500){
       children.style.animationPlayState = "running";
