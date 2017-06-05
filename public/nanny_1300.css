@@ -90,6 +90,19 @@
 		white-space: normal;
 	}
 	/*Home Page*/
+	#arrow{
+		background: url("/images/arrow.png") center center no-repeat;
+		position: absolute;
+		top: 20px;
+		left: 300px;
+		outline: none;
+		border: none;
+		height: 200px;
+		width: 350px;
+		z-index: 3;
+		transform: scale(.7) rotate(-8deg);
+		visibility: hidden;
+	}
 	#clickY{
 		position: absolute;
 		background-color: #62080E;

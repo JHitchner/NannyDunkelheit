@@ -57,11 +57,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     window.setTimeout(function() {
       blockY.style.display = "none";
       openBG.style.backgroundImage = "url('images/homePageNannyBlood.png')";
+      arrow.style.visibility = "visible";
     }, 2000);
     scene.style.whiteSpace = "nowrap";
     creak.play();
     whisperOpen.play();
-    alert("Scroll --->");
   });
 // Function that prints the text of the story one character at a time.
   function pageOne(){

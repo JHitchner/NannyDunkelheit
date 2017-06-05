@@ -91,6 +91,17 @@
 		white-space: normal;
 	}
 	/*Home Page*/
+	#arrow{
+		background: url("/images/arrow.png") center center no-repeat;
+		position: absolute;
+		top: 50px;
+		left: 700px;
+		height: 200px;
+		width: 350px;
+		z-index: 3;
+		transform: scale(.7) rotate(-8deg);
+		visibility: hidden;
+	}
 	#clickY{
 		position: absolute;
 		background-color: #62080E;
@@ -303,7 +314,7 @@
 		font-family: 'Arima Madurai', cursive;
 		font-size: 25px;
 	}
-	/*Nanny Meets the Children*/
+	/*Scene 2 Nanny At the Door*/
 	.bg3::after {
 	  background: url("/images/scene2.png") center center no-repeat;
 	  height: 100%;
