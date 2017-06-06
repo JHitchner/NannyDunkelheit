@@ -1,5 +1,6 @@
 # Nanny Dunkelheit
 
+
 #### A story of friendship, adventure, and absolutely nothing creepy at all.
 <!-- <hr> -->
 ### About this project:
@@ -13,3 +14,7 @@ The images were created in Photoshop CS5 and the audio was edited with Reason an
 ### Interactions:
 
 ### JS Features:
+
+[![forthebadge](http://forthebadge.com/images/badges/made-with-ruby.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/uses-css.svg)](http://forthebadge.com)
