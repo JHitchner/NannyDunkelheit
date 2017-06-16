@@ -31,18 +31,21 @@ For these kinds of animations some math is needed!..but only some ;). Here I hav
 
 ### JS Features:
 #### OnScroll-
-<span style="padding:10px;">
-As mentioned above there were no libraries used in building this project. All functionality was created with pure Javascript. I used onScroll to trigger most of the animations and audio. In the below example the animation starts when the User scrolls between a short range of pixels. As I learned early on in the creation of this project is that onScroll works with **< >** comparison operators and not **==**. So I did a range of 100 pixels to check for.</span><br>
+As mentioned above there were no libraries used in building this project. All functionality was created with pure Javascript. I used onScroll to trigger most of the animations and audio. In the below example the animation starts when the User scrolls between a short range of pixels. As I learned early on in the creation of this project is that onScroll works with **< >** comparison operators and not **==**. So I did a range of 100 pixels to check for.<br>
+
 <span>
 <img src="https://user-images.githubusercontent.com/16992474/27236512-5034a138-5293-11e7-8598-e99fe0a176d8.gif" width="400"> 
 <img src="https://user-images.githubusercontent.com/16992474/27237606-cd9a29d2-5297-11e7-8977-b577a10d54e6.gif" width="400"> 
 </span><br>
+
 #### Auto Type-
 <span>
-This was fun for me to figure out. I wanted to create the "typing" affect but 100% from my own head. After some thought I came up with this solution.</span><br> 
+This was fun for me to figure out. I wanted to create the "typing" affect but 100% from my own head. After some thought I came up with this solution.
+</span>
+
 <span>
-<img src="https://user-images.githubusercontent.com/16992474/27236513-5037a5cc-5293-11e7-8b82-33f31fae22d9.gif" width="400">
-<img src="https://user-images.githubusercontent.com/16992474/27237607-cda14a64-5297-11e7-8fa5-14baac42216b.gif" width="400">
+<img style="float:left;" src="https://user-images.githubusercontent.com/16992474/27236513-5037a5cc-5293-11e7-8b82-33f31fae22d9.gif" width="400">
+<img style="float:left;"src="https://user-images.githubusercontent.com/16992474/27237607-cda14a64-5297-11e7-8fa5-14baac42216b.gif" width="400">
 </span>
 
 [![forthebadge](http://forthebadge.com/images/badges/made-with-ruby.svg)](http://forthebadge.com)
